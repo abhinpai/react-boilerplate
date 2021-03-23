@@ -12,7 +12,7 @@ ReactDOM.render(
     <AppDataContext initialState={InitialState} reducer={reducer}>
       <Router>
         <Switch>
-          <Route path='/'>
+          <Route path='/' exact>
             <Home />
           </Route>
           <Route path='/home'>

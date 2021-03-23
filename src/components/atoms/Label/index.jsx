@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Label = ({ text, className }) => {
+const Label = ({ text, className = 'label' }) => {
   return (
     <div className={className}>
       <span>{text}</span>

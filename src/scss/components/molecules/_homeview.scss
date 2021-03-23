@@ -1,4 +1,18 @@
 .home-view {
   @include default-section();
   @include background-transition();
+  flex-direction: column;
+
+  & .goto-about {
+    @include default-label();
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+      @include button-scale(1.04);
+    }
+    &:not(:hover) {
+      @include button-scale(1);
+    }
+  }
 }
