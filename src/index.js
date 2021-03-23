@@ -1,12 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import './scss/main.scss';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Home, About } from './pages/index';
+import { AppDataContext } from './state/appContext';
+import reducer, { InitialState } from './state/reducer';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <AppDataContext initialState={InitialState} reducer={reducer}>
+      <Router>
+        <Switch>
+          <Route path='/'>
+            <Home />
+          </Route>
+          <Route path='/home'>
+            <Home />
+          </Route>
+          <Route path='/about'>
+            <About />
+          </Route>
+        </Switch>
+      </Router>
+    </AppDataContext>
   </React.StrictMode>,
   document.getElementById('root')
 );

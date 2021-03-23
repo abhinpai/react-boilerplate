@@ -1,0 +1,4 @@
+.home-view {
+  @include default-section();
+  @include background-transition();
+}

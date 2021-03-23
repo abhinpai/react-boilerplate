@@ -1,0 +1,25 @@
+@mixin default-section {
+  height: 100%;
+  background-color: #845ec2;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin default-page {
+  height: 100%;
+  margin: 1rem;
+  padding: 2rem;
+}
+
+// Animation
+
+@mixin button-scale($scale: 1.1, $duration: 500ms) {
+  transform: scale($scale);
+  transition: transform $duration ease-in-out;
+}
+
+@mixin background-transition {
+  transition: background 1000ms ease-in-out;
+}

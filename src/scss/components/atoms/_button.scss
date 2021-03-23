@@ -1,0 +1,16 @@
+.default-button {
+  background-color: #d4d4d4;
+  padding: 10px;
+  border-radius: 4px;
+  width: fit-content;
+  user-select: none;
+  cursor: pointer;
+
+  &:hover {
+    @include button-scale(1.04);
+  }
+
+  &:not(:hover) {
+    @include button-scale(1);
+  }
+}
